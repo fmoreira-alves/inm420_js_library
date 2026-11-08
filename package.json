@@ -1,0 +1,14 @@
+{
+  "name": "inm420-js-library",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "lite-server --baseDir=\"mapleleaf\""
+  },
+  "author": "Felipe Alves",
+  "license": "private",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

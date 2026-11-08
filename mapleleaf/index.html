@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Toronto's attractions, neighborhoods, culture and travel experiences.">
+    <title>Explore Toronto | Discover the City</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Library stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.2/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">explore<span>toronto.</span></a>
+
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#attractions">Attractions</a>
+                <a href="#explore">Explore</a>
+                <a href="#weather">Weather</a>
+                <a href="#contact" class="nav-button">Plan Your Trip</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero section: Granim.js -->
+        <section class="hero" id="home">
+            <canvas id="hero-gradient" aria-hidden="true"></canvas>
+
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <span class="eyebrow hero-eyebrow">WELCOME TO TORONTO, CANADA</span>
+
+                    <h1>Discover a city<br>full of <em>possibilities.</em></h1>
+
+                    <p>
+                        From iconic landmarks to hidden local gems,
+                        Toronto is waiting to be explored.
+                        Your next unforgettable adventure starts here.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#attractions" class="button button-primary">Explore Attractions ↗</a>
+                        <a href="#explore" class="button button-outline">Discover the City</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div>
+                            <strong>140+</strong>
+                            <span>Neighborhoods</span>
+                        </div>
+                        <div>
+                            <strong>200+</strong>
+                            <span>Cultures</span>
+                        </div>
+                        <div>
+                            <strong>4</strong>
+                            <span>Seasons to Explore</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrap" data-aos="fade-left">
+                    <img
+                        class="hero-image"
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_skyline_toronto_islands_b.JPG?width=1200"
+                        alt="Toronto skyline and CN Tower viewed from Toronto Islands"
+                    >
+
+                    <div class="hero-image-label">
+                        <span class="label-icon">✦</span>
+                        <div>
+                            <strong>Toronto, Ontario</strong>
+                            <span>Canada's largest city</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>SCROLL TO EXPLORE</span>
+                <span>↓</span>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="intro section-padding">
+            <div class="container intro-grid">
+                <div data-aos="fade-right">
+                    <span class="eyebrow">THE CITY EXPERIENCE</span>
+                    <h2>One city.<br><span>Endless stories.</span></h2>
+                </div>
+
+                <div data-aos="fade-left">
+                    <p>
+                        Toronto is Canada's largest city and one of the most
+                        multicultural destinations in the world. Whether you
+                        love art, food, architecture, nature or nightlife,
+                        there is always something new to discover.
+                    </p>
+
+                    <a href="#attractions" class="text-link">See what Toronto offers ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions carousel: Glide.js -->
+        <section class="attractions section-padding" id="attractions">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow">MUST-SEE PLACES</span>
+                        <h2>Explore the <span>highlights.</span></h2>
+                        <p>Iconic destinations that make Toronto unforgettable.</p>
+                    </div>
+
+                    <div class="slider-controls">
+                        <button class="slider-prev" type="button" aria-label="Previous attraction">←</button>
+                        <button class="slider-next" type="button" aria-label="Next attraction">→</button>
+                    </div>
+                </div>
+
+                <div class="glide attractions-glide" data-aos="fade-up">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+
+                            <!-- CN Tower -->
+                            <li class="glide__slide">
+                                <article class="attraction-card">
+                                    <img
+                                        src="https://commons.wikimedia.org/wiki/Special:FilePath/CN_Tower_from_AGO_(daytime).jpg?width=900"
+                                        alt="CN Tower in Toronto"
+                                        loading="lazy"
+                                    >
+
+                                    <div class="attraction-info">
+                                        <span>01 / ICONIC LANDMARK</span>
+                                        <h3>CN Tower</h3>
+                                        <p>
+                                            Experience breathtaking views from
+                                            one of Toronto's most famous landmarks.
+                                        </p>
+                                        <a href="https://www.cntower.ca/" target="_blank" rel="noopener noreferrer" class="card-link">Discover more ↗</a>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- Toronto Islands -->
+                            <li class="glide__slide">
+                                <article class="attraction-card">
+                                    <img
+                                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_skyline_toronto_islands_b.JPG?width=900"
+                                        alt="View of Toronto skyline from Toronto Islands"
+                                        loading="lazy"
+                                    >
+
+                                    <div class="attraction-info">
+                                        <span>02 / OUTDOOR ESCAPE</span>
+                                        <h3>Toronto Islands</h3>
+                                        <p>
+                                            Enjoy waterfront views, peaceful
+                                            beaches and green spaces just
+                                            outside downtown.
+                                        </p>
+                                        <a href="https://www.toronto.ca/explore-enjoy/parks-recreation/places-spaces/parks-and-recreation-facilities/toronto-island-park/" target="_blank" rel="noopener noreferrer" class="card-link">Discover more ↗</a>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- Casa Loma -->
+                            <li class="glide__slide">
+                                <article class="attraction-card">
+                                    <img
+                                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Loma_Toronto_Canada.jpg?width=900"
+                                        alt="Casa Loma historic castle in Toronto"
+                                        loading="lazy"
+                                    >
+
+                                    <div class="attraction-info">
+                                        <span>03 / HISTORY & CULTURE</span>
+                                        <h3>Casa Loma</h3>
+                                        <p>
+                                            Step into a historic castle filled
+                                            with beautiful architecture and
+                                            fascinating stories.
+                                        </p>
+                                        <a href="https://casaloma.ca/" target="_blank" rel="noopener noreferrer" class="card-link">Discover more ↗</a>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- Art Gallery of Ontario -->
+                            <li class="glide__slide">
+                                <article class="attraction-card">
+                                    <img
+                                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Frank_Gehry_Art_Gallery_of_Ontario_Toronto%2C_Canada.jpg?width=1200"
+                                        alt="Art Gallery of Ontario glass facade designed by Frank Gehry"
+                                        loading="lazy"
+                                    >
+
+                                    <div class="attraction-info">
+                                        <span>04 / ARTS & DESIGN</span>
+                                        <h3>Art Gallery of Ontario</h3>
+                                        <p>
+                                            Discover inspiring exhibitions,
+                                            Canadian artwork and the museum's
+                                            distinctive architecture.
+                                        </p>
+                                        <a href="https://ago.ca/" target="_blank" rel="noopener noreferrer" class="card-link">Discover more ↗</a>
+                                    </div>
+                                </article>
+                            </li>
+
+                            <!-- St. Lawrence Market -->
+                            <li class="glide__slide">
+                                <article class="attraction-card">
+                                    <img
+                                        src="https://commons.wikimedia.org/wiki/Special:FilePath/St_Lawerence_South_Market_Exterior_202112.jpg?width=900"
+                                        alt="Exterior of St. Lawrence Market South building in Toronto"
+                                        loading="lazy"
+                                    >
+
+                                    <div class="attraction-info">
+                                        <span>05 / FOOD & CULTURE</span>
+                                        <h3>St. Lawrence Market</h3>
+                                        <p>
+                                            Explore local food, fresh ingredients
+                                            and one of Toronto's best-known
+                                            historic markets.
+                                        </p>
+                                        <a href="https://www.stlawrencemarket.com/" target="_blank" rel="noopener noreferrer" class="card-link">Discover more ↗</a>
+                                    </div>
+                                </article>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- City experience -->
+        <section class="experience section-padding">
+            <div class="container experience-grid">
+                <div class="experience-image" data-aos="fade-right">
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:FilePath/Toronto_skyline_toronto_islands_b.JPG?width=1100"
+                        alt="Toronto skyline across the waterfront"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="experience-content" data-aos="fade-left">
+                    <span class="eyebrow">MORE THAN A DESTINATION</span>
+                    <h2>Feel the energy.<br><span>Live the city.</span></h2>
+
+                    <p>
+                        Every neighborhood has its own personality.
+                        Discover creative spaces, amazing restaurants,
+                        waterfront adventures and cultural experiences.
+                    </p>
+
+                    <div class="feature-list">
+                        <div><span class="feature-icon">✦</span><span>World-class food and diverse cultures</span></div>
+                        <div><span class="feature-icon">✦</span><span>Art, museums and live entertainment</span></div>
+                        <div><span class="feature-icon">✦</span><span>Beautiful parks and waterfront trails</span></div>
+                    </div>
+
+                    <a href="#explore" class="button button-dark">Explore Neighborhoods ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive map: Leaflet -->
+        <section class="map-section section-padding" id="explore">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <div>
+                        <span class="eyebrow">FIND YOUR WAY</span>
+                        <h2>Explore Toronto <span>your way.</span></h2>
+                        <p>Discover popular attractions on our interactive city map.</p>
+                    </div>
+                </div>
+
+                <div class="map-layout" data-aos="fade-up">
+                    <div id="toronto-map" aria-label="Interactive map of Toronto attractions"></div>
+
+                    <div class="map-sidebar">
+                        <span class="eyebrow">CITY GUIDE</span>
+                        <h3>Where to next?</h3>
+                        <p>Select a destination to find it on the map.</p>
+
+                        <button class="map-location active" data-lat="43.6426" data-lng="-79.3871" type="button">
+                            <span class="location-number">01</span>
+                            <span><strong>CN Tower</strong><small>Downtown Toronto</small></span>
+                            <span>↗</span>
+                        </button>
+
+                        <button class="map-location" data-lat="43.6205" data-lng="-79.3785" type="button">
+                            <span class="location-number">02</span>
+                            <span><strong>Toronto Islands</strong><small>Lake Ontario</small></span>
+                            <span>↗</span>
+                        </button>
+
+                        <button class="map-location" data-lat="43.6780" data-lng="-79.4094" type="button">
+                            <span class="location-number">03</span>
+                            <span><strong>Casa Loma</strong><small>Midtown Toronto</small></span>
+                            <span>↗</span>
+                        </button>
+
+                        <button class="map-location" data-lat="43.6536" data-lng="-79.3925" type="button">
+                            <span class="location-number">04</span>
+                            <span><strong>Art Gallery of Ontario</strong><small>Grange Park</small></span>
+                            <span>↗</span>
+                        </button>
+
+                        <button class="map-location" data-lat="43.6487" data-lng="-79.3715" type="button">
+                            <span class="location-number">05</span>
+                            <span><strong>St. Lawrence Market</strong><small>Old Town Toronto</small></span>
+                            <span>↗</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather: Chart.js -->
+        <section class="weather-section section-padding" id="weather">
+            <div class="container weather-layout">
+                <div class="weather-text" data-aos="fade-right">
+                    <span class="eyebrow">PLAN YOUR VISIT</span>
+                    <h2>Every season<br>has its <span>magic.</span></h2>
+
+                    <p>
+                        Toronto offers something special throughout the year.
+                        From warm summer days by the lake to snowy winter
+                        adventures, find the best season for your trip.
+                    </p>
+
+                    <div class="season-tags">
+                        <span>☀ Summer</span>
+                        <span>❄ Winter</span>
+                        <span>✿ Spring</span>
+                        <span>🍁 Fall</span>
+                    </div>
+                </div>
+
+                <div class="weather-chart-card" data-aos="fade-left">
+                    <div class="chart-header">
+                        <div>
+                            <span class="eyebrow">TORONTO WEATHER</span>
+                            <h3>Average Monthly Temperature</h3>
+                        </div>
+                        <span class="chart-unit">°C</span>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="weather-chart" aria-label="Toronto monthly temperature chart"></canvas>
+                    </div>
+
+                    <p class="chart-note">Illustrative monthly mean temperatures, not a live weather forecast.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel form: Cleave.js -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container contact-layout">
+                <div class="contact-text" data-aos="fade-right">
+                    <span class="eyebrow">START YOUR ADVENTURE</span>
+                    <h2>Your Toronto story<br><span>starts here.</span></h2>
+
+                    <p>
+                        Ready to explore? Tell us when you're planning to visit
+                        and start imagining your next city adventure.
+                    </p>
+
+                    <div class="contact-decoration">✳</div>
+                </div>
+
+                <div class="contact-form-card" data-aos="fade-left">
+                    <h3>Plan your visit</h3>
+                    <p>Enter your details to preview your trip information.</p>
+
+                    <form id="trip-form">
+                        <div class="form-group">
+                            <label for="visitor-name">Full Name</label>
+                            <input type="text" id="visitor-name" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="visitor-email">Email Address</label>
+                            <input type="email" id="visitor-email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trip-date">Planned Travel Date</label>
+                            <input type="text" id="trip-date" placeholder="YYYY-MM-DD" inputmode="numeric" maxlength="10" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="travel-interest">What interests you most?</label>
+                            <select id="travel-interest" required>
+                                <option value="" disabled selected>Select an experience</option>
+                                <option value="Culture & Art">Culture & Art</option>
+                                <option value="Food & Nightlife">Food & Nightlife</option>
+                                <option value="Nature & Outdoors">Nature & Outdoors</option>
+                                <option value="Architecture & Landmarks">Architecture & Landmarks</option>
+                            </select>
+                        </div>
+
+                        <button class="button button-primary form-submit" type="submit">
+                            Preview My Trip ↗
+                        </button>
+
+                        <p id="form-message" class="form-message" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <a href="#home" class="logo footer-logo">explore<span>toronto.</span></a>
+                    <p>Discover more. Experience more.<br>Fall in love with Toronto.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#attractions">Attractions</a>
+                    <a href="#explore">Explore</a>
+                    <a href="#weather">Weather</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Explore Toronto. Student web design project.</span>
+                <span>Made in Toronto, Canada</span>
+            </div>
+
+            <div class="photo-credits">
+                <p>Photography: Wikimedia Commons contributors. Some images are cropped.</p>
+                <a href="https://commons.wikimedia.org/wiki/File:Toronto_skyline_toronto_islands_b.JPG" target="_blank" rel="noopener noreferrer">Skyline</a>
+                <a href="https://commons.wikimedia.org/wiki/File:CN_Tower_from_AGO_(daytime).jpg" target="_blank" rel="noopener noreferrer">CN Tower</a>
+                <a href="https://commons.wikimedia.org/wiki/File:Casa_Loma_Toronto_Canada.jpg" target="_blank" rel="noopener noreferrer">Casa Loma</a>
+                <a href="https://commons.wikimedia.org/wiki/File:Frank_Gehry_Art_Gallery_of_Ontario_Toronto,_Canada.jpg" target="_blank" rel="noopener noreferrer">AGO</a>
+                <a href="https://commons.wikimedia.org/wiki/File:St_Lawerence_South_Market_Exterior_202112.jpg" target="_blank" rel="noopener noreferrer">St. Lawrence Market</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.2/dist/glide.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
